@@ -9,8 +9,10 @@
  ### 添加你的ssh key到ssh-agent
 再添加新的ssh key到ssh-agent 来管理你的key之前，你应该先[检查已经存在的key](https://help.github.com/articles/checking-for-existing-ssh-keys)和[生成新的SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)。添加ssh key到代理(agent)的时候要用默认的 mac命令行工具的ssh-add命令，不要用如 [macports](https://www.macports.org/), [homebrew](http://brew.sh/), 等其他的的工具.
 #### 1 在后台开启 ssh-agent
-    ```$ eval "$(ssh-agent -s)"
-       Agent pid 59566```
+ ```
+   $ eval "$(ssh-agent -s)"
+     Agent pid 59566
+ ```
 #### 2如果你的苹果系统大于等于10.12.2，你需要去修改`~/.ssh/config`文件来自动加载所有的key到ssh-agent，并在keychain中存储密钥(passphrases)
 ``` 
 Host *
